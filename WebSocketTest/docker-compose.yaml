@@ -10,7 +10,7 @@ services:
     volumes:
       - ./server:/usr/src/app
     tty: true
-    command: "node server.js"
+    # command: "node server.js"
 
   frontend:
     build:
@@ -20,7 +20,7 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/usr/src/app
-    command: "npm run dev"
+    # command: "npm run dev"
     tty: true
     environment:
       - NEXT_PUBLIC_WEBSOCKET_URL=ws://localhost:8080
